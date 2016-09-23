@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nbF-sl-xC1">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="fv5-qv-bwL">
+            <objects>
+                <tableViewController id="nbF-sl-xC1" customClass="ViewController" customModule="CollectionViewInTableViewCell" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="NDW-ex-7CU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CollectionViewTableViewCell" id="9a5-3N-V2j" customClass="CollectionViewTableViewCell" customModule="CollectionViewInTableViewCell" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9a5-3N-V2j" id="9aH-A4-v03">
+                                    <frame key="frameInset" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6yt-1f-kRq">
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="43.5" id="wyQ-tn-675"/>
+                                            </constraints>
+                                            <collectionViewLayout key="collectionViewLayout" id="aVS-YE-YFn" customClass="GridCollectionViewLayout" customModule="CollectionViewInTableViewCell" customModuleProvider="target"/>
+                                            <cells/>
+                                            <connections>
+                                                <outlet property="dataSource" destination="9a5-3N-V2j" id="8js-fS-ubw"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="6yt-1f-kRq" secondAttribute="bottom" id="1Jc-np-lfv"/>
+                                        <constraint firstItem="6yt-1f-kRq" firstAttribute="leading" secondItem="9aH-A4-v03" secondAttribute="leading" id="B2f-fJ-14u"/>
+                                        <constraint firstAttribute="trailing" secondItem="6yt-1f-kRq" secondAttribute="trailing" id="KzN-hB-8eB"/>
+                                        <constraint firstItem="6yt-1f-kRq" firstAttribute="top" secondItem="9aH-A4-v03" secondAttribute="top" id="PKA-Bp-cOg"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="collectionView" destination="6yt-1f-kRq" id="3tU-lL-NE4"/>
+                                    <outlet property="collectionViewHeightConstraint" destination="wyQ-tn-675" id="K4Y-7Z-XUr"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="nbF-sl-xC1" id="iAl-G3-yQD"/>
+                            <outlet property="delegate" destination="nbF-sl-xC1" id="Xdi-lk-tjc"/>
+                        </connections>
+                    </tableView>
+                    <nil key="simulatedStatusBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tgG-0d-3Rr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112.8" y="126.38680659670166"/>
+        </scene>
+    </scenes>
+</document>
